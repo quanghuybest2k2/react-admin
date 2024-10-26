@@ -4,17 +4,15 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
   CCloseButton,
   CSidebar,
-  CSidebarBrand,
   CSidebarFooter,
   CSidebarHeader,
   CSidebarToggler,
 } from '@coreui/react'
+import { Link } from 'react-router-dom'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import dlu from '@src/assets/brand/dlu.png'
-import it_dlu from '@src/assets/brand/it_dlu.png'
-import farm from '@src/assets/brand/farm.png'
+import logo from '@src/assets/brand/logo.svg'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -36,21 +34,12 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarHeader className="border-bottom">
-        <CSidebarBrand to="/">
+        <Link to="/">
           <div className="container text-center">
-            <div className="row row-cols-auto">
-              <div className="col">
-                <img src={dlu} alt="dlu" height={40} />
-              </div>
-              <div className="col">
-                <img src={it_dlu} alt="it_dlu" height={40} />
-              </div>
-              <div className="col">
-                <img src={farm} alt="farm" height={40} />
-              </div>
-            </div>
+            <img src={logo} alt="dlu" height={40} />
+            <h4 className="mt-2 text-white">Admin Dashboard</h4>
           </div>
-        </CSidebarBrand>
+        </Link>
         <CCloseButton
           className="d-lg-none"
           dark

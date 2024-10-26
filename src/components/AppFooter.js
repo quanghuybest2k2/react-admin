@@ -2,19 +2,16 @@ import React from 'react'
 import { CFooter } from '@coreui/react'
 
 const AppFooter = () => {
+  const year = new Date().getFullYear()
+
   return (
-    <CFooter className="px-4">
-      <div>
-        <a href="https://online.dlu.edu.vn" target="_blank" rel="noopener noreferrer">
-          DLU
+    <CFooter>
+      <div className="d-flex justify-content-center align-items-center w-100">
+        &copy; {year} &nbsp;
+        <a href="https://github.com/quanghuybest2k2" target="__blank" rel="noopener noreferrer">
+          Đoàn Quang Huy
         </a>
-        <span className="ms-1">&copy; 2024 Đại học Đà Lạt.</span>
-      </div>
-      <div className="ms-auto">
-        <span className="me-1">Support </span>
-        <a href="https://cntt.dlu.edu.vn" target="_blank" rel="noopener noreferrer">
-          Khoa công nghệ thông tin
-        </a>
+        <span className="ms-1"> All Rights Reserved.</span>
       </div>
     </CFooter>
   )

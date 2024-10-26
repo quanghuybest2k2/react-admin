@@ -1,38 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Swal from 'sweetalert2'
-import { CButton } from '@coreui/react'
+import { CButton, CModal, CModalBody, CModalHeader, CModalFooter, CModalTitle } from '@coreui/react'
 
 const Dashboard = () => {
+  // visible show model
+  const [visible, setVisible] = useState(false)
+
   const showDialogWithPassingParams = () => {
+    setVisible(true)
+  }
+
+  const handleDeleteConfirmed = () => {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You will not be able to recover this imaginary file!',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire({
-          title: 'Deleted!',
-          position: 'top-end',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 2000,
-          timerProgressBar: true,
-        })
-      }
+      icon: 'success',
+      text: 'Xóa thành công',
+      showConfirmButton: false,
+      position: 'top-end',
+      toast: true,
+      timer: 2000,
+      timerProgressBar: true,
+      showClass: {
+        popup: `
+                animate__animated
+                animate__fadeInRight
+                animate__faster
+            `,
+      },
     })
+    setVisible(false)
   }
 
   return (
-    <div>
-      <p>Hello world!</p>
-      <CButton color="primary" onClick={showDialogWithPassingParams}>
-        Click me
-      </CButton>
-    </div>
+    <>
+      <div>
+        <p>Hello world!</p>
+        <CButton color="primary" onClick={showDialogWithPassingParams}>
+          Click me
+        </CButton>
+      </div>
+      <CModal
+        backdrop="static"
+        visible={visible}
+        onClose={() => setVisible(false)}
+        aria-labelledby="Xóa lịch"
+      >
+        <CModalHeader>
+          <CModalTitle>Bạn có chắc muốn xóa mục này?</CModalTitle>
+        </CModalHeader>
+        <CModalBody>Dữ liệu sẽ không thể khôi phục. Bạn có muốn tiếp tục?</CModalBody>
+        <CModalFooter>
+          <CButton color="primary" onClick={() => handleDeleteConfirmed()}>
+            Xác nhận
+          </CButton>
+          <CButton color="secondary" onClick={() => setVisible(false)}>
+            Hủy bỏ
+          </CButton>
+        </CModalFooter>
+      </CModal>
+    </>
   )
 }
 

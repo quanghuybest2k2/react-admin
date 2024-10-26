@@ -14,6 +14,7 @@ import {
 import { DocsExample } from '@src/components'
 
 import ReactImg from '@src/assets/images/react.jpg'
+import VueImg from '@src/assets/images/vue.jpg'
 
 const Placeholders = () => {
   return (
@@ -45,20 +46,7 @@ const Placeholders = () => {
                   </CCardBody>
                 </CCard>
                 <CCard style={{ width: '18rem' }}>
-                  <CCardImage
-                    component="svg"
-                    orientation="top"
-                    width="100%"
-                    height="162"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Placeholder</title>
-                    <rect width="100%" height="100%" fill="#868e96"></rect>
-                  </CCardImage>
+                  <CCardImage orientation="top" src={VueImg} />
                   <CCardBody>
                     <CPlaceholder component={CCardTitle} animation="glow" xs={7}>
                       <CPlaceholder xs={6} />
