@@ -329,6 +329,7 @@ const _nav = [
   {
     component: CNavItem,
     name: 'Docs',
+    target: '__blank',
     href: 'https://coreui.io/react/docs/templates/installation/',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
   },

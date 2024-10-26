@@ -2,6 +2,9 @@ import React from 'react'
 
 // pages
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
+const Single = React.lazy(() => import('./views/single/Single'))
+const Dropdown1 = React.lazy(() => import('./views/Dropdown/Dropdown1'))
+const Dropdown2 = React.lazy(() => import('./views/Dropdown/Dropdown2'))
 // end pages
 
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
@@ -57,6 +60,9 @@ const routes = [
   // page router
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/single', name: 'Single', element: Single },
+  { path: '/dropdown-1', name: 'Dropdown1', element: Dropdown1 },
+  { path: '/dropdown-2', name: 'Dropdown2', element: Dropdown2 },
   // end page router
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
