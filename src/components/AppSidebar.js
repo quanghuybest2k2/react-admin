@@ -9,12 +9,12 @@ import {
   CSidebarHeader,
   CSidebarToggler,
 } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import { logo } from 'src/assets/brand/logo'
-import { sygnet } from 'src/assets/brand/sygnet'
+import dlu from 'src/assets/brand/dlu.png'
+import it_dlu from 'src/assets/brand/it_dlu.png'
+import farm from 'src/assets/brand/farm.png'
 
 // sidebar nav config
 import navigation from '../_nav'
@@ -37,8 +37,19 @@ const AppSidebar = () => {
     >
       <CSidebarHeader className="border-bottom">
         <CSidebarBrand to="/">
-          <CIcon customClassName="sidebar-brand-full" icon={logo} height={32} />
-          <CIcon customClassName="sidebar-brand-narrow" icon={sygnet} height={32} />
+          <div className="container text-center">
+            <div className="row row-cols-auto">
+              <div className="col">
+                <img src={dlu} alt="dlu" height={40} />
+              </div>
+              <div className="col">
+                <img src={it_dlu} alt="it_dlu" height={40} />
+              </div>
+              <div className="col">
+                <img src={farm} alt="farm" height={40} />
+              </div>
+            </div>
+          </div>
         </CSidebarBrand>
         <CCloseButton
           className="d-lg-none"

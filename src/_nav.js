@@ -11,11 +11,16 @@ import {
   cilPencil,
   cilPuzzle,
   cilSpeedometer,
+  cilCompass,
+  cilDevices,
   cilStar,
+  cilSettings,
+  cilCameraControl,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
+  // pages
   {
     component: CNavItem,
     name: 'Dashboard',
@@ -23,25 +28,58 @@ const _nav = [
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: 'info',
-      text: 'NEW',
+      text: 'MỚI',
     },
   },
   {
-    component: CNavTitle,
-    name: 'Theme',
+    component: CNavItem,
+    name: 'Thống kê',
+    to: '/statistical',
+    icon: <CIcon icon={cilCompass} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'MỚI',
+    },
+  },
+  {
+    component: CNavGroup,
+    name: 'Điều khiển thiết bị',
+    to: '/greenhouse-a1',
+    icon: <CIcon icon={cilDevices} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Greenhouse A1',
+        to: '/greenhouse-a1',
+      },
+      {
+        component: CNavItem,
+        name: 'Greenhouse A2',
+        to: '/greenhouse-a2',
+      },
+    ],
   },
   {
     component: CNavItem,
-    name: 'Colors',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    name: 'Cấu hình tự động',
+    to: '/auto-config',
+    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'MỚI',
+    },
   },
   {
     component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
-    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+    name: 'Camera',
+    to: '/camera',
+    icon: <CIcon icon={cilCameraControl} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    },
   },
+  // end pages
   {
     component: CNavTitle,
     name: 'Components',
@@ -262,6 +300,22 @@ const _nav = [
       color: 'info',
       text: 'NEW',
     },
+  },
+  {
+    component: CNavTitle,
+    name: 'Theme',
+  },
+  {
+    component: CNavItem,
+    name: 'Colors',
+    to: '/theme/colors',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+  },
+  {
+    component: CNavItem,
+    name: 'Typography',
+    to: '/theme/typography',
+    icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavTitle,
