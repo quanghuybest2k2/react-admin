@@ -14,8 +14,6 @@ import {
   cilCompass,
   cilDevices,
   cilStar,
-  cilSettings,
-  cilCameraControl,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -28,56 +26,36 @@ const _nav = [
     icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     badge: {
       color: 'info',
-      text: 'MỚI',
+      text: 'NEW',
     },
   },
   {
     component: CNavItem,
-    name: 'Thống kê',
-    to: '/statistical',
+    name: 'Single',
+    to: '/single',
     icon: <CIcon icon={cilCompass} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'MỚI',
-    },
-  },
-  {
-    component: CNavGroup,
-    name: 'Điều khiển thiết bị',
-    to: '/greenhouse-a1',
-    icon: <CIcon icon={cilDevices} customClassName="nav-icon" />,
-    items: [
-      {
-        component: CNavItem,
-        name: 'Greenhouse A1',
-        to: '/greenhouse-a1',
-      },
-      {
-        component: CNavItem,
-        name: 'Greenhouse A2',
-        to: '/greenhouse-a2',
-      },
-    ],
-  },
-  {
-    component: CNavItem,
-    name: 'Cấu hình tự động',
-    to: '/auto-config',
-    icon: <CIcon icon={cilSettings} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'MỚI',
-    },
-  },
-  {
-    component: CNavItem,
-    name: 'Camera',
-    to: '/camera',
-    icon: <CIcon icon={cilCameraControl} customClassName="nav-icon" />,
     badge: {
       color: 'info',
       text: 'NEW',
     },
+  },
+  {
+    component: CNavGroup,
+    name: 'Dropdown',
+    to: '/dropdown-1',
+    icon: <CIcon icon={cilDevices} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Dropdown 1',
+        to: '/dropdown-1',
+      },
+      {
+        component: CNavItem,
+        name: 'Dropdown 2',
+        to: '/dropdown-2',
+      },
+    ],
   },
   // end pages
   {

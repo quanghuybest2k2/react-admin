@@ -2,14 +2,6 @@ import React from 'react'
 
 // pages
 const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
-const Statistical = React.lazy(() => import('./views/statistical/Statistical'))
-const GreenhouseA1 = React.lazy(() => import('./views/DeviceControl/GreenhouseA1'))
-const GreenhouseA2 = React.lazy(() => import('./views/DeviceControl/GreenhouseA2'))
-const AutoConfig = React.lazy(() => import('./views/AutoConfig/AutoConfig'))
-const DetailConfig = React.lazy(() => import('./views/AutoConfig/DetailConfig'))
-const CreateConfig = React.lazy(() => import('./views/AutoConfig/CreateConfig'))
-const EditConfig = React.lazy(() => import('./views/AutoConfig/EditConfig'))
-const Camera = React.lazy(() => import('./views/Camera/Camera'))
 // end pages
 
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
@@ -65,18 +57,6 @@ const routes = [
   // page router
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
-  { path: '/statistical', name: 'Statistical', element: Statistical },
-  { path: '/greenhouse-a1', name: 'GreenhouseA1', element: GreenhouseA1 },
-  { path: '/greenhouse-a2', name: 'GreenhouseA2', element: GreenhouseA2 },
-  { path: '/auto-config', name: 'AutoConfig', element: AutoConfig },
-  {
-    path: '/auto-config/detail/:id',
-    name: 'CreateConfig',
-    element: DetailConfig,
-  },
-  { path: '/auto-config/create', name: 'CreateConfig', element: CreateConfig },
-  { path: '/auto-config/edit/:id', name: 'EditConfig', element: EditConfig },
-  { path: '/camera', name: 'Camera', element: Camera },
   // end page router
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },

@@ -4,24 +4,10 @@
 $ npm install
 ```
 
-or
-
-```bash
-$ yarn install
-```
-
 ### Basic usage
 
 ```bash
-# dev server with hot reload at http://localhost:3000
 $ npm start
-```
-
-or
-
-```bash
-# dev server with hot reload at http://localhost:3000
-$ yarn start
 ```
 
 Navigate to [http://localhost:3000](http://localhost:3000). The app will automatically reload if you change any of the source files.
@@ -31,23 +17,13 @@ Navigate to [http://localhost:3000](http://localhost:3000). The app will automat
 Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
 
 ```bash
-# build for production with minification
 $ npm run build
 ```
 
-or
-
-```bash
-# build for production with minification
-$ yarn build
-```
-
-## What's included
-
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+## Structure folder
 
 ```
-coreui-free-react-admin-template
+react-admin
 ├── public/          # static files
 │   ├── favicon.ico
 │   └── manifest.json
@@ -70,3 +46,5 @@ coreui-free-react-admin-template
 ├── ...
 └── vite.config.mjs  # vite config
 ```
+
+Docs: [https://coreui.io/react/docs/templates/installation](https://coreui.io/react/docs/templates/installation)
