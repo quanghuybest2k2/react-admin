@@ -19,7 +19,7 @@ const Dashboard = () => {
           position: 'top-end',
           icon: 'success',
           showConfirmButton: false,
-          timer: 2500,
+          timer: 2000,
           timerProgressBar: true,
         })
       }
