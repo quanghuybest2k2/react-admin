@@ -15,9 +15,7 @@ export default defineConfig(({ mode }) => {
     },
     css: {
       postcss: {
-        plugins: [
-          autoprefixer({}), // add options if needed
-        ],
+        plugins: [autoprefixer({})],
       },
     },
     define: {
@@ -41,16 +39,18 @@ export default defineConfig(({ mode }) => {
     resolve: {
       alias: [
         {
-          find: 'src/',
-          replacement: `${path.resolve(__dirname, 'src')}/`,
+          find: '@src',
+          replacement: path.resolve(__dirname, './src'),
         },
+        { find: '@public', replacement: path.resolve(__dirname, './public') },
       ],
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.scss'],
     },
     server: {
       port: 3000,
-      proxy: {
-        // https://vitejs.dev/config/server-options.html
+      host: true,
+      watch: {
+        usePolling: true,
       },
     },
   }

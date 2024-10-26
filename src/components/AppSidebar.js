@@ -12,9 +12,9 @@ import {
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import dlu from 'src/assets/brand/dlu.png'
-import it_dlu from 'src/assets/brand/it_dlu.png'
-import farm from 'src/assets/brand/farm.png'
+import dlu from '@src/assets/brand/dlu.png'
+import it_dlu from '@src/assets/brand/it_dlu.png'
+import farm from '@src/assets/brand/farm.png'
 
 // sidebar nav config
 import navigation from '../_nav'
